@@ -1,6 +1,6 @@
 <#PSScriptInfo
 
-.VERSION 1.0.0
+.VERSION 1.0.1
 
 .GUID 3c3fed78-54c5-4c2c-bff7-989ecfd449ed
 
@@ -62,5 +62,6 @@ if ($chromeWasRunning) {
 
     Stop-Process -Name chrome -Force -ErrorAction SilentlyContinue
     Start-Sleep -Seconds 2
-    Start-Process $chromePath -ArgumentList "$chromeThemeArgument --restore-last-session --hide-crash-restore-bubble"
 }
+
+ Start-Process $chromePath -ArgumentList "$chromeThemeArgument --restore-last-session --hide-crash-restore-bubble"
